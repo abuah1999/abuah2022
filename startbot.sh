@@ -1,3 +1,3 @@
 #!/bin/bash
-chmod a+x ./engines/abuahfish
-python lichess-bot.py
+python -m nuitka --follow-imports abuahfish/abuahfish.py
+ls
