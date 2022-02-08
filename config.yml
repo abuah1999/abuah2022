@@ -2,8 +2,8 @@ token: "lip_LZzYEgkgcibTgb4sE504"    # Lichess OAuth2 Token.
 url: "https://lichess.org/"  # Lichess base URL.
 
 engine:                      # Engine settings.
-  dir: "./engines/"          # Directory containing the engine. This can be an absolute path or one relative to lichess-bot/.
-  name: "abuahfish"        # Binary name of the engine to use.
+  dir: "./"          # Directory containing the engine. This can be an absolute path or one relative to lichess-bot/.
+  name: "abuahfish.bin"        # Binary name of the engine to use.
   working_dir: ""            # Directory where the chess engine will read and write files. If blank or missing, the current directory is used.
   protocol: "uci"            # "uci" or "xboard"
   ponder: true               # Think on opponent's time.
