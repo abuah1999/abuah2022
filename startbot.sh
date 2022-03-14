@@ -1,4 +1,4 @@
 #!/bin/bash
 ls
-chmod a+x ./abuahfish_v2
+chmod -R a+x ./bin
 python lichess-bot.py
