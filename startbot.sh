@@ -1,5 +1,5 @@
 #!/bin/bash
-python -m nuitka --follow-imports abuahfish/abuahfish.py
+go build .
 ls
-chmod a+x ./abuahfish.bin
+chmod a+x ./abuahfish_v2
 python lichess-bot.py
