@@ -58,9 +58,9 @@ engine:                      # Engine settings.
 #    Move Overhead: 100       # Increase if your bot flags games too often.
 #    Threads: 2               # Max CPU threads the engine can use.
 #    Hash: 256                # Max memory (in megabytes) the engine can allocate.
-   go_commands:             # Additional options to pass to the UCI go command.
+#  go_commands:             # Additional options to pass to the UCI go command.
 #     nodes: 1               # Search so many nodes only.
-     depth: 4               # Search depth ply only.
+#     depth: 4               # Search depth ply only.
 #     movetime: 1000         # Integer. Search exactly movetime milliseconds.
 # xboard_options:            # Arbitrary XBoard options passed to the engine.
 #   cores: "4"
