@@ -17,7 +17,7 @@ func main() {
 
 	//test_fen, _ := chess.FEN("rn1qkbnr/ppp2ppp/3p4/4p3/4P1b1/2N5/PPPP1PPP/R1B1KBNR w KQkq - 0 4")
 	padTables()
-	test()
+	//test()
 	pos := parseFEN(FEN_INITIAL)
 
 	var smove string
@@ -82,9 +82,9 @@ func main() {
 			}
 			//output(game.Position().Board().Draw())
 		} else if strings.HasPrefix(smove, "go") {
-			depth := 1000
+			depth := 5
 			movetime := -1
-			show_thinking := true
+			show_thinking := false
 			//var our_time int
 			our_time := 3600000 // one hour
 			params := strings.Fields(smove)[1:]
@@ -162,11 +162,13 @@ func main() {
 				output("resign \n")
 			} else {
 				ml = strings.Fields(moves)
-				if len(ml) > 1 {
+				/*if len(ml) > 1 {
+					// removed ponder ml[1]
 					fmt.Printf("bestmove %v ponder %v \n", ml[0], ml[1])
 				} else {
 					fmt.Printf("bestmove %v \n", ml[0])
-				}
+				}*/
+				fmt.Printf("bestmove %v \n", ml[0])
 				pos = pos.move(mparse(color, ml[0]))
 				color = 1 - color
 			}
