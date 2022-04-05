@@ -19,8 +19,8 @@ func main() {
 	padTables()
 	//test()
 	pos := parseFEN(FEN_INITIAL)
-	f, _ := os.Create("log")
-	defer f.Close()
+	//f, _ := os.Create("log")
+	//defer f.Close()
 	var smove string
 	var stack []string
 	var color int
@@ -35,17 +35,17 @@ func main() {
 			}
 			//fmt.Println((smove))
 		}
-		f.WriteString(smove + "\n")
+		//f.WriteString(smove + "\n")
 		if smove == "quit" {
 			break
 		} else if smove == "uci" {
-			f.WriteString("uci received\n")
+			//f.WriteString("uci received\n")
 			output("id name Abuahfish .v2")
 			output("id author Amaechi Abuah")
 			output("option name Hash type spin default 1 min 1 max 128")
 			output("uciok")
 		} else if smove == "isready" {
-			f.WriteString("isready received\n")
+			//f.WriteString("isready received\n")
 			output("readyok")
 		} else if smove == "ucinewgame" {
 			stack = append(stack, "position fen "+FEN_INITIAL)
@@ -87,7 +87,7 @@ func main() {
 			}
 			//output(game.Position().Board().Draw())
 		} else if strings.HasPrefix(smove, "go") {
-			f.WriteString("go received\n")
+			//f.WriteString("go received\n")
 			depth := 4
 			movetime := -1
 			show_thinking := false
@@ -169,8 +169,8 @@ func main() {
 			} else {
 				ml = strings.Fields(moves)
 
-				fmt.Printf("\nbestmove %v \n", ml[0])
-				f.WriteString(ml[0] + "\n")
+				fmt.Printf("bestmove %v \n", ml[0])
+				//f.WriteString(ml[0] + "\n")
 
 				pos = pos.move(mparse(color, ml[0]))
 				color = 1 - color
