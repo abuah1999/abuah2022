@@ -1,6 +1,5 @@
-module abuahfish_v2
+module gofish
 
-// +heroku goVersion go1.17
 go 1.17
 
-require github.com/deckarep/golang-set v1.8.0
+require github.com/notnil/chess v1.8.0
