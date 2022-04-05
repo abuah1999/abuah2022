@@ -168,12 +168,10 @@ func main() {
 				output("resign \n")
 			} else {
 				ml = strings.Fields(moves)
-				if len(ml) > 1 {
-					fmt.Printf("\nbestmove %v ponder %v \n", ml[0], ml[1])
-					f.WriteString(ml[0] + "\n")
-				} else {
-					fmt.Printf("\nbestmove %v \n", ml[0])
-				}
+
+				fmt.Printf("\nbestmove %v \n", ml[0])
+				f.WriteString(ml[0] + "\n")
+
 				pos = pos.move(mparse(color, ml[0]))
 				color = 1 - color
 			}
