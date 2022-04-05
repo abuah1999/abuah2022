@@ -90,7 +90,7 @@ func main() {
 			f.WriteString("go received\n")
 			depth := 4
 			movetime := -1
-			show_thinking := true
+			show_thinking := false
 			//var our_time int
 			our_time := 3600000 // one hour
 			params := strings.Fields(smove)[1:]
