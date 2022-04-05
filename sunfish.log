@@ -1,0 +1,101 @@
+DEBUG:root:>>> uci 
+DEBUG:root:id name Sunfish
+DEBUG:root:id author Thomas Ahle & Contributors
+DEBUG:root:uciok
+DEBUG:root:>>> ucinewgame 
+DEBUG:root:>>> position fen rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1 
+DEBUG:root:>>> isready 
+DEBUG:root:readyok
+DEBUG:root:>>> position startpos moves e2e4 c7c5 f2f3 
+DEBUG:root:>>> go wtime 177880 btime 177977 winc 0 binc 0 
+DEBUG:root:info depth 1 score cp -31 time 0 nodes 26 pv e7e5
+DEBUG:root:info depth 2 score cp -73 time 9 nodes 181 pv e7e5 d2d4
+DEBUG:root:info depth 3 score cp -36 time 17 nodes 363 pv e7e5
+DEBUG:root:info depth 4 score cp -36 time 40 nodes 1145 pv e7e5
+DEBUG:root:info depth 5 score cp -28 time 228 nodes 5413 pv e7e5 b1c3 b8c6
+DEBUG:root:info depth 6 score cp -32 time 540 nodes 16100 pv e7e5 b1c3 b8c6
+DEBUG:root:info depth 7 score cp -30 time 3098 nodes 83115 pv 
+DEBUG:root:info depth 8 score cp -54 time 10545 nodes 258835 pv 
+DEBUG:root:bestmove e7e5 ponder f1c4
+DEBUG:root:>>> position startpos moves e2e4 c7c5 f2f3 e7e5 d2d3 
+DEBUG:root:>>> go wtime 171170 btime 166844 winc 0 binc 0 
+DEBUG:root:info depth 1 score cp -15 time 36 nodes 33 pv d7d5
+DEBUG:root:info depth 2 score cp -20 time 45 nodes 244 pv d8h4 g2g3
+DEBUG:root:info depth 3 score cp -21 time 67 nodes 664 pv d7d5
+DEBUG:root:info depth 4 score cp -20 time 101 nodes 1728 pv d7d5
+DEBUG:root:info depth 5 score cp -20 time 331 nodes 8041 pv b8c6 b1c3 g8f6
+DEBUG:root:info depth 6 score cp -26 time 1058 nodes 27476 pv 
+DEBUG:root:info depth 7 score cp -8 time 4679 nodes 117020 pv 
+DEBUG:root:bestmove g8f6 ponder b1c3
+DEBUG:root:>>> position startpos moves e2e4 c7c5 f2f3 e7e5 d2d3 g8f6 h2h4 
+DEBUG:root:>>> go wtime 150070 btime 161285 winc 0 binc 0 
+DEBUG:root:info depth 1 score cp 13 time 27 nodes 60 pv d7d5
+DEBUG:root:info depth 2 score cp -22 time 36 nodes 230 pv b8c6 b1c3
+DEBUG:root:info depth 3 score cp 6 time 49 nodes 521 pv b8c6
+DEBUG:root:info depth 4 score cp -22 time 101 nodes 1602 pv b8c6 b1c3
+DEBUG:root:info depth 5 score cp 10 time 469 nodes 9033 pv f8e7 b1c3 e8g8
+DEBUG:root:info depth 6 score cp -7 time 910 nodes 19811 pv 
+DEBUG:root:info depth 7 score cp 28 time 2966 nodes 72969 pv 
+DEBUG:root:info depth 8 score cp -6 time 14949 nodes 340759 pv 
+DEBUG:root:bestmove f8e7 ponder h4h5
+DEBUG:root:>>> position startpos moves e2e4 c7c5 f2f3 e7e5 d2d3 g8f6 h2h4 f8e7 c1g5 
+DEBUG:root:>>> go wtime 144230 btime 145741 winc 0 binc 0 
+DEBUG:root:info depth 1 score cp 18 time 53 nodes 37 pv e8g8
+DEBUG:root:info depth 2 score cp -15 time 66 nodes 225 pv e8g8 b1c3
+DEBUG:root:info depth 3 score cp 29 time 90 nodes 854 pv h7h6 g5f6 e7f6
+DEBUG:root:info depth 4 score cp -4 time 173 nodes 2997 pv 
+DEBUG:root:info depth 5 score cp 43 time 550 nodes 12662 pv 
+DEBUG:root:info depth 6 score cp 6 time 1603 nodes 41665 pv 
+DEBUG:root:info depth 7 score cp 45 time 6055 nodes 148077 pv 
+DEBUG:root:bestmove d8b6 ponder b2b3
+DEBUG:root:>>> position startpos moves e2e4 c7c5 f2f3 e7e5 d2d3 g8f6 h2h4 f8e7 c1g5 d8b6 b2b3 
+DEBUG:root:>>> go wtime 141270 btime 139136 winc 0 binc 0 
+DEBUG:root:info depth 1 score cp 32 time 24 nodes 47 pv e8g8
+DEBUG:root:info depth 2 score cp -4 time 35 nodes 237 pv e8g8 b1c3
+DEBUG:root:info depth 3 score cp 43 time 56 nodes 1010 pv h7h6 g5f6 e7f6
+DEBUG:root:info depth 4 score cp 8 time 170 nodes 4359 pv 
+DEBUG:root:info depth 5 score cp 50 time 413 nodes 14492 pv h7h6 g5f6 e7f6
+DEBUG:root:info depth 6 score cp 24 time 1494 nodes 42341 pv 
+DEBUG:root:info depth 7 score cp 45 time 4298 nodes 142401 pv 
+DEBUG:root:bestmove h7h6 ponder g5f6
+DEBUG:root:>>> position startpos moves e2e4 c7c5 f2f3 e7e5 d2d3 g8f6 h2h4 f8e7 c1g5 d8b6 b2b3 h7h6 g5f6 
+DEBUG:root:>>> go wtime 136820 btime 134653 winc 0 binc 0 
+DEBUG:root:info depth 1 score cp 45 time 26 nodes 37 pv e7f6
+DEBUG:root:info depth 2 score cp 12 time 50 nodes 560 pv e7f6 b1c3
+DEBUG:root:info depth 3 score cp 49 time 67 nodes 1179 pv e7f6
+DEBUG:root:info depth 4 score cp 41 time 154 nodes 3931 pv e7f6
+DEBUG:root:info depth 5 score cp 42 time 261 nodes 8987 pv 
+DEBUG:root:info depth 6 score cp 28 time 1088 nodes 26237 pv 
+DEBUG:root:info depth 7 score cp 48 time 2315 nodes 71596 pv 
+DEBUG:root:info depth 8 score cp 31 time 7695 nodes 216636 pv 
+DEBUG:root:bestmove e7f6 ponder b1c3
+DEBUG:root:>>> position startpos moves e2e4 c7c5 f2f3 e7e5 d2d3 g8f6 h2h4 f8e7 c1g5 d8b6 b2b3 h7h6 g5f6 e7f6 b1c3 
+DEBUG:root:>>> go wtime 134690 btime 126381 winc 0 binc 0 
+DEBUG:root:info depth 1 score cp 65 time 32 nodes 104 pv e8g8
+DEBUG:root:info depth 2 score cp 46 time 40 nodes 295 pv e8g8 c3d5
+DEBUG:root:info depth 3 score cp 44 time 60 nodes 1076 pv b6b4 g1e2 e8g8
+DEBUG:root:info depth 4 score cp 18 time 119 nodes 2862 pv 
+DEBUG:root:info depth 5 score cp 50 time 410 nodes 13985 pv 
+DEBUG:root:info depth 6 score cp 38 time 1140 nodes 38210 pv b6a5 g1e2 e8g8
+DEBUG:root:info depth 7 score cp 62 time 2519 nodes 82479 pv 
+DEBUG:root:info depth 8 score cp 36 time 6412 nodes 187030 pv 
+DEBUG:root:bestmove b6a5 ponder g1e2
+DEBUG:root:>>> position startpos moves e2e4 c7c5 f2f3 e7e5 d2d3 g8f6 h2h4 f8e7 c1g5 d8b6 b2b3 h7h6 g5f6 e7f6 b1c3 b6a5 d1d2 
+DEBUG:root:>>> go wtime 125700 btime 119790 winc 0 binc 0 
+DEBUG:root:info depth 1 score cp 65 time 49 nodes 144 pv e8g8
+DEBUG:root:info depth 2 score cp 32 time 69 nodes 507 pv e8g8 a1d1
+DEBUG:root:info depth 3 score cp 59 time 85 nodes 937 pv e8g8
+DEBUG:root:info depth 4 score cp 36 time 147 nodes 2651 pv e8g8 a1d1
+DEBUG:root:info depth 5 score cp 65 time 456 nodes 12763 pv e8g8 a1d1 b8c6
+DEBUG:root:info depth 6 score cp 48 time 1157 nodes 33532 pv 
+DEBUG:root:info depth 7 score cp 70 time 3212 nodes 89100 pv 
+DEBUG:root:bestmove e8g8 ponder a1d1
+DEBUG:root:>>> position startpos moves e2e4 c7c5 f2f3 e7e5 d2d3 g8f6 h2h4 f8e7 c1g5 d8b6 b2b3 h7h6 g5f6 e7f6 b1c3 b6a5 d1d2 e8g8 
+DEBUG:root:>>> stop 
+DEBUG:root:>>> quit 
+DEBUG:root:>>> go 
+DEBUG:root:info depth 1 score cp 84 time 2 nodes 25 pv d2d4
+DEBUG:root:info depth 2 score cp 42 time 13 nodes 159 pv d2d4 e7e5
+DEBUG:root:info depth 3 score cp 80 time 22 nodes 318 pv d2d4
+DEBUG:root:info depth 4 score cp 43 time 73 nodes 1358 pv d2d4 d7d5
+DEBUG:root:bestmove d2d4 ponder d7d5

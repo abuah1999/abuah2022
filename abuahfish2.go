@@ -19,13 +19,15 @@ func main() {
 	padTables()
 	//test()
 	pos := parseFEN(FEN_INITIAL)
-
+	f, _ := os.Create("log")
+	defer f.Close()
 	var smove string
 	var stack []string
 	var color int
 	scanner := bufio.NewScanner(os.Stdin)
 	for true {
 		if len(stack) > 0 {
+			smove = stack[len(stack)-1]
 			stack = stack[:len(stack)-1]
 		} else {
 			if scanner.Scan() {
@@ -33,14 +35,17 @@ func main() {
 			}
 			//fmt.Println((smove))
 		}
-
+		f.WriteString(smove + "\n")
 		if smove == "quit" {
 			break
 		} else if smove == "uci" {
+			f.WriteString("uci received\n")
 			output("id name Abuahfish .v2")
 			output("id author Amaechi Abuah")
+			output("option name Hash type spin default 1 min 1 max 128")
 			output("uciok")
 		} else if smove == "isready" {
+			f.WriteString("isready received\n")
 			output("readyok")
 		} else if smove == "ucinewgame" {
 			stack = append(stack, "position fen "+FEN_INITIAL)
@@ -82,9 +87,10 @@ func main() {
 			}
 			//output(game.Position().Board().Draw())
 		} else if strings.HasPrefix(smove, "go") {
-			depth := 5
+			f.WriteString("go received\n")
+			depth := 4
 			movetime := -1
-			show_thinking := false
+			show_thinking := true
 			//var our_time int
 			our_time := 3600000 // one hour
 			params := strings.Fields(smove)[1:]
@@ -98,12 +104,12 @@ func main() {
 				if param == "movetime" {
 					movetime, _ = strconv.Atoi(val)
 				}
-				if param == "wtime" && color == 0 {
+				if param == "wtime" {
 					our_time, _ = strconv.Atoi(val)
 				}
-				if param == "btime" && color == 1 {
+				/*if param == "btime" && color == 1 {
 					our_time, _ = strconv.Atoi(val)
-				}
+				}*/
 			}
 
 			moves_remain := 400
@@ -162,13 +168,12 @@ func main() {
 				output("resign \n")
 			} else {
 				ml = strings.Fields(moves)
-				/*if len(ml) > 1 {
-					// removed ponder ml[1]
-					fmt.Printf("bestmove %v ponder %v \n", ml[0], ml[1])
+				if len(ml) > 1 {
+					fmt.Printf("\nbestmove %v ponder %v \n", ml[0], ml[1])
+					f.WriteString(ml[0] + "\n")
 				} else {
-					fmt.Printf("bestmove %v \n", ml[0])
-				}*/
-				fmt.Printf("bestmove %v \n", ml[0])
+					fmt.Printf("\nbestmove %v \n", ml[0])
+				}
 				pos = pos.move(mparse(color, ml[0]))
 				color = 1 - color
 			}
